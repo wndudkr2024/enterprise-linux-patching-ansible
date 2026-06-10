@@ -151,6 +151,30 @@ Planned improvements:
 * Slack notifications
 
 ---
+## Screenshots
+
+### Project Structure
+
+![Project Structure](screenshots/project-structure.png)
+
+---
+
+### Docker Test Environment
+
+![Docker Test Node](screenshots/docker-test-node.png)
+
+---
+
+### Ansible Connectivity Test
+
+![Ansible Ping](screenshots/ansible-ping.png)
+
+---
+
+### Successful Playbook Execution
+
+![Playbook Execution](screenshots/playbook-success.png)
+---
 
 ## Disclaimer
 
