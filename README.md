@@ -1,22 +1,29 @@
 # Enterprise Linux Patch Automation with Ansible
 
-Production-style Ansible framework for patching RHEL-compatible Linux servers using role-based architecture and Infrastructure as Code practices.
+Production-style Ansible framework for automating patch management across RHEL-compatible Linux servers.
+
+This repository demonstrates enterprise automation practices using role-based architecture and Infrastructure as Code principles.
 
 ---
 
 ## Overview
 
-This project demonstrates a reusable and maintainable Ansible automation framework for enterprise Linux patch management.
+Managing Linux patching manually becomes difficult as infrastructure scales.
 
-The framework is designed to support multiple environments and follows Infrastructure as Code principles to ensure consistency, scalability, and operational reliability.
+This project provides a reusable Ansible framework designed for:
+
+* Enterprise Linux environments
+* Repeatable patching workflows
+* Environment-specific configurations
+* Reliable and maintainable operations
 
 ---
 
 ## Features
 
-* Role-based Ansible automation
+* Role-based Ansible architecture
 * Hierarchical inventories
-* Environment-specific configurations
+* Environment-specific variables
 * group_vars and host_vars support
 * Security-only patch mode
 * Full patch mode
@@ -109,7 +116,7 @@ playbooks/site.yml \
 
 ## Design Principles
 
-This project was designed with the following goals:
+The framework is designed with the following goals:
 
 * Maintainability
 * Reusability
@@ -123,7 +130,7 @@ This project was designed with the following goals:
 ## Intended Use Cases
 
 * Enterprise Linux patch automation
-* RHEL and Oracle Linux lifecycle management
+* RHEL lifecycle management
 * Standardized patching workflows
 * Infrastructure as Code initiatives
 * Repeatable and auditable operations
@@ -132,7 +139,7 @@ This project was designed with the following goals:
 
 ## Future Enhancements
 
-Planned improvements include:
+Planned improvements:
 
 * GitHub Actions CI pipeline
 * yamllint
