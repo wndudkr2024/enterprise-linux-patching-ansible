@@ -1,0 +1,26 @@
+---
+- name: Capture kernel after patching
+  ansible.builtin.command: uname -r
+  register: post_patch_kernel
+  changed_when: false
+
+- name: Capture uptime after patching
+  ansible.builtin.command: uptime
+  register: post_patch_uptime
+  changed_when: false
+
+- name: Write post-check summary
+  ansible.builtin.template:
+    src: postcheck-summary.j2
+    dest: "{{ patch_log_dir }}/postcheck-{{ inventory_hostname }}.log"
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Display patch summary
+  ansible.builtin.debug:
+    msg:
+      - "Host: {{ inventory_hostname }}"
+      - "Pre-patch kernel: {{ pre_patch_kernel.stdout }}"
+      - "Post-patch kernel: {{ post_patch_kernel.stdout }}"
+      - "Reboot required rc: {{ reboot_required.rc }}"

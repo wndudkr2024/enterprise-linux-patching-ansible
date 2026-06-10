@@ -1,0 +1,5 @@
+---
+patch_reboot_allowed: true
+patch_security_only: false
+patch_excluded_packages: []
+patch_log_dir: /var/log/ansible-patching

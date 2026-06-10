@@ -1,0 +1,26 @@
+---
+- name: Ensure patch log directory exists
+  ansible.builtin.file:
+    path: "{{ patch_log_dir }}"
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Capture currently running kernel
+  ansible.builtin.command: uname -r
+  register: pre_patch_kernel
+  changed_when: false
+
+- name: Capture uptime before patching
+  ansible.builtin.command: uptime
+  register: pre_patch_uptime
+  changed_when: false
+
+- name: Write pre-check summary
+  ansible.builtin.template:
+    src: precheck-summary.j2
+    dest: "{{ patch_log_dir }}/precheck-{{ inventory_hostname }}.log"
+    owner: root
+    group: root
+    mode: "0644"

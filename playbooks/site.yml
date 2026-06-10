@@ -1,0 +1,8 @@
+---
+- name: Enterprise Linux patch automation
+  hosts: rhel_servers
+  gather_facts: true
+  become: true
+
+  roles:
+    - role: patching

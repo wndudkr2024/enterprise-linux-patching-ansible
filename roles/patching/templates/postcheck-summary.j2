@@ -1,0 +1,7 @@
+Host: {{ inventory_hostname }}
+Distribution: {{ ansible_distribution }} {{ ansible_distribution_version }}
+Kernel before patching: {{ pre_patch_kernel.stdout }}
+Kernel after patching: {{ post_patch_kernel.stdout }}
+Uptime after patching: {{ post_patch_uptime.stdout }}
+Reboot allowed: {{ patch_reboot_allowed }}
+Reboot required return code: {{ reboot_required.rc }}

@@ -1,0 +1,6 @@
+Host: {{ inventory_hostname }}
+Distribution: {{ ansible_distribution }} {{ ansible_distribution_version }}
+Kernel before patching: {{ pre_patch_kernel.stdout }}
+Uptime before patching: {{ pre_patch_uptime.stdout }}
+Security-only mode: {{ patch_security_only }}
+Excluded packages: {{ patch_excluded_packages | join(', ') }}
