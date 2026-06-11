@@ -1,6 +1,6 @@
 ---
-patch_reboot_allowed: true
-patch_security_only: false
-patch_excluded_packages: []
-patch_log_dir: /var/log/ansible-patching
-patch_reboot_timeout: 900
+patching_reboot_allowed: true
+patching_security_only: false
+patching_excluded_packages: []
+patching_log_dir: /var/log/ansible-patching
+patching_reboot_timeout: 900

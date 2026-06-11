@@ -4,28 +4,28 @@
     name: "*"
     state: latest
     security: true
-    exclude: "{{ patch_excluded_packages }}"
-  register: patch_result
-  when: patch_security_only | bool
+    exclude: "{{ patching_excluded_packages }}"
+  register: patching_patch_result
+  when: patching_security_only | bool
 
 - name: Apply all available updates
   ansible.builtin.dnf:
     name: "*"
     state: latest
-    exclude: "{{ patch_excluded_packages }}"
-  register: patch_result
-  when: not patch_security_only | bool
+    exclude: "{{ patching_excluded_packages }}"
+  register: patching_patch_result
+  when: not patching_security_only | bool
 
 - name: Check whether reboot is required
   ansible.builtin.command: needs-restarting -r
-  register: reboot_required
+  register: patching_reboot_required
   failed_when: false
-  changed_when: reboot_required.rc == 1
+  changed_when: patching_reboot_required.rc == 1
 
 - name: Reboot server when required and allowed
   ansible.builtin.reboot:
-    reboot_timeout: "{{ patch_reboot_timeout }}"
+    reboot_timeout: "{{ patching_reboot_timeout }}"
     test_command: whoami
   when:
-    - patch_reboot_allowed | bool
-    - reboot_required.rc == 1
+    - patching_reboot_allowed | bool
+    - patching_reboot_required.rc == 1

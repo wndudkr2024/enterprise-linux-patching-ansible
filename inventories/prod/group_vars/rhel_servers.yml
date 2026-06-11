@@ -1,6 +1,6 @@
 ---
-patch_reboot_allowed: true
-patch_security_only: true
-patch_excluded_packages:
+patching_reboot_allowed: true
+patching_security_only: true
+patching_excluded_packages:
   - kernel*
-patch_log_dir: /var/log/ansible-patching
+patching_log_dir: /var/log/ansible-patching
