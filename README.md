@@ -1,5 +1,7 @@
 # Enterprise Linux Patch Automation with Ansible
 
+![Ansible CI](https://github.com/wndudkr2024/enterprise-linux-patching-ansible/actions/workflows/ci.yml/badge.svg)
+
 Production-style Ansible framework for automating patch management across RHEL-compatible Linux servers.
 
 This repository demonstrates enterprise automation practices using role-based architecture and Infrastructure as Code principles.
