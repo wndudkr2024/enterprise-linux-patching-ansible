@@ -168,4 +168,4 @@ The framework is designed with the following goals:
 
 ## Disclaimer
 
-demonstrates production patterns used in enterprise environments.
+This project demonstrates production patterns used in enterprise environments.
