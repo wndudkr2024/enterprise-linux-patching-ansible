@@ -1,6 +1,7 @@
 # Enterprise Linux Patch Automation with Ansible
 
-![Ansible CI](https://github.com/wndudkr2024/enterprise-linux-patching-ansible/actions/workflows/ci.yml/badge.svg)
+[![Ansible CI](https://github.com/wndudkr2024/enterprise-linux-patching-ansible/actions/workflows/ci.yml/badge.svg)](https://github.com/wndudkr2024/enterprise-linux-patching-ansible/actions/workflows/ci.yml)
+
 
 Production-style Ansible framework for automating patch management across RHEL-compatible Linux servers.
 
